@@ -1,3 +1,41 @@
+// import React, { useState, useEffect } from 'react';
+// import Card from './component/Card';
+
+// function App() {
+//   const [users, setUsers] = useState([]); // State ko 'users' (plural) rakha hai taake samajh aaye ye list hai
+
+//   useEffect(() => {
+//     fetch('https://jsonplaceholder.typicode.com/users')
+//       .then((res) => res.json())
+//       .then((data) => {
+//         setUsers(data);
+//       })
+//       .catch((error) => console.error("Error fetching data:", error));
+//   }, []);
+
+//   return (
+//     <>
+//       <h1>User List</h1>
+
+//       <section id='section'>
+
+//       {users.map((item) => (
+//         <Card 
+//           key={item.id}     
+//           name={item.name} 
+//           username={item.username} 
+//           email={item.email} 
+
+//         />
+//       ))}
+//       </section>
+//     </>
+//   );
+// }
+
+// export default App;
+
+
 
 import React, { useEffect, useState } from 'react'
 
@@ -8,7 +46,7 @@ function App() {
   const [index, setIndex] = useState(0)
 
   useEffect(() => {
-    fetch(' ')
+    fetch('https://opentdb.com/api.php?amount=10&category=18&difficulty=easy&type=multiple')
       .then((res) => res.json())
       .then((data) => {
         console.log(data)
